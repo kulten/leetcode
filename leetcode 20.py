@@ -20,8 +20,8 @@ Output: true
 
 class Solution:
     def isValid(self, s: str) -> bool:
-        open_brackets = ["(", "{", "["]
-        closed_brackets = [")", "}", "]"]
+        open_brackets = {"(", "{", "["}
+        closed_brackets = {")", "}", "]"}
         bracket_mapping = {"}": "{", "]": "[", ")": "("}
         stack = []
         if not s:

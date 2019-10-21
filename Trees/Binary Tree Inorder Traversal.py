@@ -14,6 +14,8 @@ Output: [1,3,2]
 """
 # Definition for a binary tree node.
 
+from Trees.helper import make_tree
+
 
 class TreeNode:
     def __init__(self, x):
@@ -40,9 +42,8 @@ class Solution:
 Runtime: O(n)
 """
 if __name__ == "__main__":
-    tree = TreeNode(1)
-    tree.right = TreeNode(2)
-    tree.right.left = TreeNode(3)
+    node_list = [1, None,2,3]
+    tree = make_tree(node_list, 0)
     lol = Solution()
     print(lol.inorderTraversal(tree))
 

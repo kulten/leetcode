@@ -13,6 +13,8 @@ class ListNode:
 
 
 def create_linked_list(list):
+    if not list:
+        return
     tail = ListNode(list[0])
     head = tail
     for index in range(1, len(list)):
